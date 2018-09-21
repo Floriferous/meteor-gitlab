@@ -1,0 +1,13 @@
+image: node:8.11.4
+
+stages:
+  - test
+
+before_script:
+  - curl "https://install.meteor.com?release=1.7.0.5" | /bin/sh
+  - meteor npm i
+
+unit_tests:
+  stage: test
+  script:
+    - meteor npm t
