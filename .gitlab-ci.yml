@@ -11,17 +11,18 @@ cache:
 stages:
   - test
 
+# https://gitlab.com/gitlab-org/gitlab-runner/issues/327#note_3346917
 before_script:
-  - mv /cache/.meteor ~/.meteor
-  - mv /cache/.npm ~/.npm
+  - [ -f  /cache/.meteor ] && mv /cache/.meteor ~/.meteor
+  - [ -f  /cache/.npm ] && mv /cache/.npm ~/.npm
   - ./install_meteor.sh
   - meteor npm i
-
-after_script:
-  - mv ~/.meteor /cache/.meteor
-  - mv ~/.npm /cache/.npm
 
 unit:
   stage: test
   script:
     - echo "Logged!"
+
+after_script:
+  - [ -f  ~/.meteor ] && mv ~/.meteor /cache/.meteor
+  - [ -f  ~/.npm ] && mv ~/.npm /cache/.npm
