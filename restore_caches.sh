@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if [ -f /cache/.meteor ]; then
-   mv /cache/.meteor ~/.meteor
+if [ -f /cache/.meteorInstall ]; then
+   mv /cache/.meteorInstall ~/.meteor
 fi
 
 if [ -f /cache/.npm ]; then
