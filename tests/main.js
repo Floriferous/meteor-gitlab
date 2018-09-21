@@ -14,6 +14,10 @@ describe('meteor-gitlab', function() {
     assert.strictEqual(3 * 5, 15);
   });
 
+  it('does math properly 3', function() {
+    assert.strictEqual(5 - 4, 1);
+  });
+
   if (Meteor.isClient) {
     it('client is not server', function() {
       assert.strictEqual(Meteor.isServer, false);
