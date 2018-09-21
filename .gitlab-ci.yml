@@ -22,7 +22,7 @@ before_script:
   - ls -al
   - cd ..
   - ls -al
-  - cd Users
+  - cd ~
   - ls -al
 
 unit:
