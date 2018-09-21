@@ -1,4 +1,4 @@
-image: node:8.11.4
+image: blurri/meteor-node
 
 variables:
   METEOR_ALLOW_SUPERUSER: 'true'
