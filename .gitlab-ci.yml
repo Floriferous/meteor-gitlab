@@ -17,8 +17,10 @@ stages:
 before_script:
   - ./install_meteor.sh
   - meteor npm i
+  - cd ~
+  - ls -al
 
-unit_tests:
+unit:
   stage: test
   script:
     - meteor npm t
