@@ -15,7 +15,7 @@ stages:
   - test
 
 before_script:
-  - curl "https://install.meteor.com?release=1.7.0.5" | /bin/sh
+  - ./install_meteor.sh
   - meteor npm i
 
 unit_tests:
