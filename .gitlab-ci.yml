@@ -7,21 +7,19 @@ cache:
   paths:
     - 'node_modules'
     - '.meteor'
-    - '.npm'
-    - '.meteorInstall'
 
 stages:
   - test
 
 before_script:
-  - mv .meteorInstall ~/.meteor
-  - mv .npm ~/.npm
+  - mv /cache/.meteor ~/.meteor
+  - mv /cache/.npm ~/.npm
   - ./install_meteor.sh
   - meteor npm i
 
 after_script:
-  - mv ~/.meteor .meteorInstall
-  - mv ~/.npm .npm
+  - mv ~/.meteor /cache/.meteor
+  - mv ~/.npm /cache/.npm
 
 unit:
   stage: test
