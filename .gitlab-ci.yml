@@ -20,7 +20,7 @@ before_script:
 unit:
   stage: test
   script:
-    - echo "Logged!"
+    - meteor npm t
 
 after_script:
   - ./store_caches.sh
