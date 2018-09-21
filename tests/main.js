@@ -1,19 +1,23 @@
-import assert from "assert";
+import assert from 'assert';
 
-describe("meteor-gitlab", function () {
-  it("package.json has correct name", async function () {
-    const { name } = await import("../package.json");
-    assert.strictEqual(name, "meteor-gitlab");
+describe('meteor-gitlab', function() {
+  it('package.json has correct name', async function() {
+    const { name } = await import('../package.json');
+    assert.strictEqual(name, 'meteor-gitlab');
+  });
+
+  it('does math properly', function() {
+    assert.strictEqual(1 + 2, 3);
   });
 
   if (Meteor.isClient) {
-    it("client is not server", function () {
+    it('client is not server', function() {
       assert.strictEqual(Meteor.isServer, false);
     });
   }
 
   if (Meteor.isServer) {
-    it("server is not client", function () {
+    it('server is not client', function() {
       assert.strictEqual(Meteor.isClient, false);
     });
   }
