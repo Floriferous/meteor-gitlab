@@ -17,10 +17,15 @@ stages:
 before_script:
   - ./install_meteor.sh
   - meteor npm i
-  - cd ~
+  - ls -al
+  - cd ..
+  - ls -al
+  - cd ..
+  - ls -al
+  - cd Users
   - ls -al
 
 unit:
   stage: test
   script:
-    - meteor npm t
+    - echo "Logged!"
