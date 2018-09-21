@@ -18,6 +18,10 @@ describe('meteor-gitlab', function() {
     assert.strictEqual(5 - 4, 1);
   });
 
+  it('compares strings', function() {
+    assert.strictEqual('hello', 'hello');
+  });
+
   if (Meteor.isClient) {
     it('client is not server', function() {
       assert.strictEqual(Meteor.isServer, false);
