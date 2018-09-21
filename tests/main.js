@@ -6,8 +6,12 @@ describe('meteor-gitlab', function() {
     assert.strictEqual(name, 'meteor-gitlab');
   });
 
-  it('does math properly', function() {
+  it('does math properly 1', function() {
     assert.strictEqual(1 + 2, 3);
+  });
+
+  it('does math properly 2', function() {
+    assert.strictEqual(3 * 5, 15);
   });
 
   if (Meteor.isClient) {
