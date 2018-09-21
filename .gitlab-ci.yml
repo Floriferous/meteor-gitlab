@@ -13,8 +13,7 @@ stages:
 
 # https://gitlab.com/gitlab-org/gitlab-runner/issues/327#note_3346917
 before_script:
-  - [ -f  /cache/.meteor ] && mv /cache/.meteor ~/.meteor
-  - [ -f  /cache/.npm ] && mv /cache/.npm ~/.npm
+  - ./restore_caches.sh
   - ./install_meteor.sh
   - meteor npm i
 
@@ -24,5 +23,4 @@ unit:
     - echo "Logged!"
 
 after_script:
-  - [ -f  ~/.meteor ] && mv ~/.meteor /cache/.meteor
-  - [ -f  ~/.npm ] && mv ~/.npm /cache/.npm
+  - ./store_caches.sh
