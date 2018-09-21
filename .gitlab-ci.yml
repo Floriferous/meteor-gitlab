@@ -6,6 +6,7 @@ variables:
 cache:
   paths:
     - 'node_modules'
+    - '.meteor'
     - '~/.npm'
     - '~/.meteor'
     - '~/meteor'
